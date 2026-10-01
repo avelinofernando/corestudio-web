@@ -1,0 +1,8 @@
+# Sitio estático: no hay comando de compilación, se publica la raíz del repositorio.
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

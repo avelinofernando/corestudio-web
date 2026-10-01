@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Core Studio</title>
+  <link rel="icon" href="assets/img/brand/logo.png">
+  <meta name="description" content="Producción audiovisual y cinematográfica para marcas y negocios. Puebla, México.">
+  <meta name="theme-color" content="#0f0c0a">
+  <meta property="og:title" content="Core Studio · Producción audiovisual">
+  <meta property="og:description" content="Cinematografía, contenido y cobertura para marcas y negocios.">
+  <meta property="og:image" content="assets/video/reel-poster.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Outfit:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav-shell">
+    <nav class="mx-auto max-w-[1440px] flex items-center justify-between gap-4 rounded-2xl backdrop-blur-md bg-cocoa-900/60 border border-peach/10 pl-5 pr-2 py-2 transition-all duration-300 ease-in-out" aria-label="Principal">
+      <a href="#inicio" class="flex items-baseline gap-2 transition-all duration-300 ease-in-out hover:opacity-80" data-brand aria-label="Inicio">
+        <img src="assets/img/brand/logo.png" alt="Core Studio" class="h-6 sm:h-7 w-auto" width="1200" height="205">
+      </a>
+      <ul class="hidden md:flex items-center gap-8 text-[13px] tracking-wide">
+        <li><a class="nav-link transition-all duration-300 ease-in-out" href="#trabajo">Trabajo</a></li>
+        <li><a class="nav-link transition-all duration-300 ease-in-out" href="#servicios">Servicios</a></li>
+        <li><a class="nav-link transition-all duration-300 ease-in-out" href="#contacto">Contacto</a></li>
+        <li><a class="nav-link transition-all duration-300 ease-in-out" href="#nosotros">Nosotros</a></li>
+      </ul>
+      <div class="flex items-center gap-2">
+        <div class="hidden sm:block"><a href="#contacto" class="btn btn-solid !py-2.5 !px-5 !text-[13px]">Cotizar proyecto</a></div>
+        <button id="menu-btn" class="md:hidden w-11 h-11 rounded-xl border border-peach/10 grid place-items-center transition-all duration-300 ease-in-out hover:bg-peach/5" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+          <span class="block w-5 h-px bg-paper relative before:absolute before:w-5 before:h-px before:bg-paper before:-top-1.5 before:left-0 after:absolute after:w-5 after:h-px after:bg-paper after:top-1.5 after:left-0"></span>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="md:hidden mt-2 rounded-2xl backdrop-blur-md bg-cocoa-900/80 border border-peach/10 p-6" hidden>
+      <ul class="flex flex-col gap-5 font-display text-3xl">
+        <li><a href="#trabajo" data-close-menu>Trabajo</a></li>
+        <li><a href="#servicios" data-close-menu>Servicios</a></li>
+        <li><a href="#contacto" data-close-menu>Contacto</a></li>
+        <li><a href="#nosotros" data-close-menu>Nosotros</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="inicio" class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <div class="hero-placeholder"></div>
+        <video id="hero-video" muted loop playsinline autoplay preload="metadata"></video>
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+
+      <div class="wrap w-full relative z-10 pb-16 sm:pb-20 pt-40">
+        <p class="eyebrow mb-6" data-bind="hero.eyebrow" data-reveal>Producción audiovisual · Puebla, México</p>
+        <h1 class="hero-title font-display" id="hero-title" data-reveal="mask">
+          <em class="block">Imagen</em>
+          <strong>con intención.</strong>
+        </h1>
+        <div class="mt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+          <p class="max-w-md text-[17px] text-smoke leading-relaxed" data-bind="hero.subtitle" data-reveal style="--d:150ms">
+            Cinematografía, contenido y cobertura para marcas y negocios que quieren verse como se sienten.
+          </p>
+          <div class="flex flex-wrap gap-3" data-reveal style="--d:250ms">
+            <a href="#trabajo" class="btn btn-solid">Ver trabajo <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="#" id="reel-link" class="btn btn-ghost" target="_blank" rel="noopener">
+              <span aria-hidden="true">▶</span> Reel completo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRABAJO ============ -->
+    <section id="trabajo" class="relative py-24 sm:py-32">
+      <div class="glow w-[520px] h-[520px] -left-40 top-40" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14 sm:mb-20">
+          <div data-reveal>
+            <p class="eyebrow mb-5">Trabajo seleccionado</p>
+            <h2 class="font-display text-5xl sm:text-7xl leading-[0.95] tracking-tight">Proyectos <em>recientes</em></h2>
+          </div>
+          <div class="flex flex-wrap gap-2" id="filters" role="group" aria-label="Filtrar por categoría" data-reveal style="--d:120ms"></div>
+        </div>
+        <div class="gallery" id="gallery" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section id="servicios" class="relative py-24 sm:py-36 border-t border-peach/10">
+      <div class="wrap grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
+        <div class="lg:col-span-5">
+          <div class="lg:sticky lg:top-32">
+            <p class="eyebrow mb-5" data-reveal>Servicios</p>
+            <h2 class="font-display text-5xl sm:text-6xl leading-[0.95] tracking-tight" data-reveal>De la idea <em>a la entrega</em></h2>
+            <p class="mt-6 text-smoke max-w-sm" data-reveal>Propuesta visual, rodaje, sonido, edición y color. Tú eliges el alcance; el estándar de imagen es el mismo.</p>
+
+          </div>
+        </div>
+        <div class="lg:col-span-7" id="services" data-reveal></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section id="contacto" class="relative py-24 sm:py-36 border-t border-peach/10 overflow-hidden">
+      <div class="glow w-[700px] h-[700px] left-1/2 -translate-x-1/2 -bottom-72" aria-hidden="true"></div>
+      <div class="wrap grid grid-cols-1 lg:grid-cols-12 gap-14">
+        <div class="lg:col-span-5" data-reveal>
+          <p class="eyebrow mb-5">Contacto</p>
+          <h2 class="font-display text-5xl sm:text-7xl leading-[0.95] tracking-tight">¿Qué vamos a <em>filmar?</em></h2>
+          <p class="mt-6 text-smoke max-w-sm">Cuéntanos del proyecto, la fecha y dónde se va a publicar, y te mandamos una propuesta.</p>
+
+          <div class="mt-10">
+            <p class="field-label">Correo</p>
+            <div class="flex items-center gap-3 flex-wrap">
+              <span id="email-text" class="font-display text-2xl sm:text-3xl select-all break-all">corestds@gmail.com</span>
+              <button id="copy-email" class="chip" type="button">Copiar</button>
+            </div>
+          </div>
+          <div id="wa-block" class="mt-10" hidden>
+            <p class="field-label">WhatsApp</p>
+            <div class="flex items-center gap-3 flex-wrap">
+              <span id="wa-text" class="font-display text-2xl sm:text-3xl num select-all"></span>
+              <a id="wa-link" class="btn btn-ghost !py-2.5 !px-5 !text-[13px]" href="#" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12Z" stroke-linejoin="round"/></svg>
+                Escríbenos <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          <ul id="socials" class="mt-10 flex flex-wrap gap-2"></ul>
+        </div>
+
+        <form id="contact-form" class="lg:col-span-7 rounded-3xl backdrop-blur-md bg-cocoa-900/60 border border-peach/10 p-6 sm:p-10 grid sm:grid-cols-2 gap-5" novalidate data-reveal style="--d:120ms">
+          <div>
+            <label class="field-label" for="f-name">Nombre</label>
+            <input class="field" id="f-name" name="nombre" autocomplete="name" placeholder="Ana López">
+            <p class="field-error" data-error-for="f-name" hidden></p>
+          </div>
+          <div>
+            <label class="field-label" for="f-email">Correo</label>
+            <input class="field" id="f-email" name="correo" type="email" autocomplete="email" placeholder="ana@tumarca.mx">
+            <p class="field-error" data-error-for="f-email" hidden></p>
+          </div>
+          <div>
+            <label class="field-label" for="f-type">Tipo de proyecto</label>
+            <select class="field" id="f-type" name="tipo"></select>
+          </div>
+          <div>
+            <label class="field-label" for="f-date">Fecha tentativa</label>
+            <input class="field" id="f-date" name="fecha" type="date">
+          </div>
+          <div class="sm:col-span-2">
+            <label class="field-label" for="f-msg">Mensaje</label>
+            <textarea class="field min-h-[140px] resize-y" id="f-msg" name="mensaje" placeholder="Queremos un video de 60 segundos para la apertura de nuestra nueva sucursal…"></textarea>
+            <p class="field-error" data-error-for="f-msg" hidden></p>
+          </div>
+          <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+            <p id="form-status" class="text-[14px] text-smoke" role="status"></p>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button type="button" id="wa-submit" class="btn btn-ghost justify-center" hidden>Enviar por WhatsApp</button>
+              <button type="submit" id="email-submit" class="btn btn-solid justify-center">Enviar propuesta <span class="arrow" aria-hidden="true">→</span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ QUIÉNES SOMOS ============ -->
+    <section id="nosotros" class="relative py-24 sm:py-32 border-t border-peach/10 overflow-hidden">
+      <div class="glow w-[600px] h-[600px] -right-56 -top-20" aria-hidden="true"></div>
+      <div class="wrap grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div class="lg:col-span-5" data-reveal>
+          <p class="eyebrow mb-5">Nosotros</p>
+          <h2 class="font-display text-5xl sm:text-7xl leading-[0.95] tracking-tight">¿Quiénes <em>somos?</em></h2>
+          <div id="team-intro" class="mt-8 flex flex-col gap-4 text-smoke text-[17px] leading-relaxed max-w-md"></div>
+        </div>
+        <div id="team" class="lg:col-span-7 grid sm:grid-cols-2 gap-5 items-start" data-reveal style="--d:120ms"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-peach/10 pt-12 pb-28 sm:pb-10">
+    <div class="wrap">
+      <img src="assets/img/brand/logo.png" alt="Core Studio" class="h-8 w-auto" width="1200" height="205">
+      <div class="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-[13px] text-ash">
+        <p>© <span id="year" class="num">2026</span> <span data-bind-full="brand">Core Studio</span> · <span data-bind="brand.location">Puebla, México</span></p>
+        <ul id="footer-socials" class="flex flex-wrap gap-x-6 gap-y-2"></ul>
+        <a href="#inicio" class="nav-link transition-all duration-300 ease-in-out">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ BOTÓN FLOTANTE DE WHATSAPP ============ -->
+  <a id="wa-float" class="wa-float" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" hidden>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12Z" stroke-linejoin="round"/><path d="M9 10.5c.4 1.6 2 3.2 3.6 3.6" stroke-linecap="round"/></svg>
+    <span class="wa-float-label">WhatsApp</span>
+  </a>
+
+  <!-- ============ MODAL DE PROYECTO ============ -->
+  <dialog class="project" id="project-dialog" aria-labelledby="pd-title">
+    <div class="relative">
+      <button class="absolute top-4 right-4 z-10 w-11 h-11 rounded-full backdrop-blur-md bg-cocoa-900/60 border border-peach/10 grid place-items-center transition-all duration-300 ease-in-out hover:scale-105" id="pd-close" aria-label="Cerrar">✕</button>
+      <div id="pd-media" class="relative aspect-video bg-black"></div>
+      <div class="p-6 sm:p-10 grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-7">
+          <p class="eyebrow mb-3" id="pd-cat"></p>
+          <h3 class="font-display text-4xl sm:text-5xl leading-none" id="pd-title"></h3>
+          <p class="mt-5 text-smoke leading-relaxed" id="pd-summary"></p>
+        </div>
+        <dl class="md:col-span-5 text-[14px]" id="pd-meta"></dl>
+        <div class="md:col-span-12 pd-thumbs" id="pd-thumbs" hidden></div>
+      </div>
+    </div>
+  </dialog>
+
+</div>
+
+<script src="assets/js/content.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
