@@ -87,10 +87,7 @@
     });
     video.load();
   }
-  var reelLink = $("#reel-link");
-  if (reel.fullUrl) reelLink.href = reel.fullUrl;
-  else reelLink.href = "#trabajo", reelLink.removeAttribute("target");
-  if (reel.linkLabel) reelLink.innerHTML = '<span aria-hidden="true">▶</span> ' + esc(reel.linkLabel);
+
 
   /* ---------- Galería ---------- */
   var gallery = $("#gallery");
@@ -329,6 +326,14 @@
       $("#wa-submit").innerHTML = 'Enviar por WhatsApp <span class="arrow" aria-hidden="true">→</span>';
     }
 
+    var heroContact = $("#hero-contact");
+    if (heroContact) {
+      heroContact.href = waDefault;
+      heroContact.target = "_blank";
+      heroContact.rel = "noopener";
+      heroContact.setAttribute("aria-label", "Cotiza tu proyecto por WhatsApp");
+    }
+
     var waFloat = $("#wa-float");
     waFloat.href = waDefault;
     waFloat.hidden = false;
@@ -432,7 +437,7 @@
         links.forEach(function (l) { l.setAttribute("aria-current", l.getAttribute("href") === "#" + en.target.id ? "true" : "false"); });
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
-    ["trabajo", "servicios", "contacto", "nosotros"].forEach(function (id) { var s = document.getElementById(id); if (s) secObs.observe(s); });
+    ["trabajo", "nosotros", "servicios", "contacto"].forEach(function (id) { var s = document.getElementById(id); if (s) secObs.observe(s); });
   }
 
   /* ---------- Revelado al hacer scroll ---------- */

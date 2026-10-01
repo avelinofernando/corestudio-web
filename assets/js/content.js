@@ -188,20 +188,20 @@ window.SITE = {
   /* Sección "¿Quiénes somos?" */
   team: {
     intro: [
-      "Somos Fernando y Aldhair, los fundadores de Core Studio. Uno viene del cine y el otro de la fotografía y el marketing, y juntos hacemos fotos y videos para negocios.",
-      "Nos gusta trabajar de cerca con cada cliente: escuchamos lo que necesitas, te decimos claro qué vas a recibir y cuidamos que el resultado se vea bien y te sirva.",
+      "Somos Fernando y Aldhair, los fundadores de Core Studio. Llevamos 4 años trabajando juntos haciendo foto y video para negocios.",
+      "En ese tiempo aprendimos que los mejores proyectos salen cuando hay confianza. Por eso nos gusta conocer a nuestros clientes y hacernos sus amigos: platicamos de lo que quieres lograr, te proponemos ideas y trabajamos a gusto de principio a fin.",
     ],
     people: [
       {
         name: "Fernando Avelino",
-        role: "Video y cinematografía",
-        bio: "Tiene 19 años y estudia cinematografía. En Core Studio se encarga de la parte de video.",   // EDITAR si quieres
-        photo: "assets/img/about/fernando.jpg",   // opcional: foto vertical; mientras no exista se ve su inicial
+        role: "Dirección estética y video",
+        bio: "Tiene 19 años, estudia cine y lo que más disfruta es hacer video. Es el encargado de la dirección estética: cuida cómo se ve cada toma, la luz y el color.",
+        photo: "assets/img/about/fernando.jpg",
       },
       {
         name: "Aldhair Castañeda",
-        role: "Fotografía y marketing",
-        bio: "Es fotógrafo y estudia marketing. Se encarga de la fotografía y de que el contenido le sirva a tu negocio.",   // EDITAR si quieres
+        role: "Foto, video y marketing",
+        bio: "Es fotógrafo y videógrafo, y le gusta experimentar en cada sesión. También es el encargado del marketing: se asegura de que el contenido le sirva a tu negocio para llegar a más gente.",
         photo: "assets/img/about/aldhair.jpg",
       },
     ],
