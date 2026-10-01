@@ -89,6 +89,13 @@
   }
 
 
+  /* Botón secundario de la portada: link de Instagram (o del reel) desde content.js */
+  var reelLink = $("#reel-link");
+  if (reelLink && reel.fullUrl) {
+    reelLink.href = reel.fullUrl;
+    if (reel.linkLabel) reelLink.lastChild.textContent = " " + reel.linkLabel;
+  }
+
   /* ---------- Galería ---------- */
   var gallery = $("#gallery");
   var visibleProjects = S.projects.filter(function (p) { return !p.oculto; });
